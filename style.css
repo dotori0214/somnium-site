@@ -1,4 +1,6 @@
-/* 기본 스타일 */
+/* =======================
+   기본 설정
+======================= */
 body {
   margin: 0;
   font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
@@ -14,21 +16,23 @@ body {
   overflow-x: hidden;
 }
 
-/* 로고 섹션 */
+/* =======================
+   로고 & 타이틀
+======================= */
 #logo {
   padding: 100px 20px 60px;
 }
 
 #logo img {
   width: 280px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 15px rgba(255, 255, 180, 0.5));
 }
 
-/* 타이틀 (솜니움) */
 #logo h1 {
-  font-size: 3rem;
-  margin: 0;
-  color: #fffbe6; /* 레몬빛 흰색 */
+  font-size: 4rem; /* 큼직하게 */
+  margin: 10px 0 0;
+  color: #fffbe6; /* 레몬빛 */
   text-shadow:
     0 0 10px rgba(255, 255, 150, 0.6),
     0 0 20px rgba(255, 255, 120, 0.4),
@@ -36,47 +40,50 @@ body {
   animation: float 4s ease-in-out infinite, glow 3s ease-in-out infinite;
 }
 
-/* 둥둥 떠다니는 애니메이션 */
+/* 부드럽게 둥둥 떠다니기 */
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-12px);
   }
 }
 
-/* 발광 효과 애니메이션 */
+/* 은은한 발광 애니메이션 */
 @keyframes glow {
   0%, 100% {
     text-shadow:
-      0 0 10px rgba(255, 255, 150, 0.6),
-      0 0 20px rgba(255, 255, 120, 0.4),
-      0 0 40px rgba(255, 255, 100, 0.3);
+      0 0 10px rgba(255, 255, 150, 0.5),
+      0 0 20px rgba(255, 255, 120, 0.3),
+      0 0 40px rgba(255, 255, 100, 0.2);
   }
   50% {
     text-shadow:
-      0 0 20px rgba(255, 255, 180, 0.9),
-      0 0 40px rgba(255, 255, 150, 0.6),
-      0 0 60px rgba(255, 255, 120, 0.5);
+      0 0 20px rgba(255, 255, 180, 0.8),
+      0 0 40px rgba(255, 255, 150, 0.5),
+      0 0 60px rgba(255, 255, 120, 0.3);
   }
 }
 
-/* 각 섹션 공통 */
+/* =======================
+   공통 섹션
+======================= */
 .section {
   padding: 60px 20px;
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* 섹션 제목 */
+/* 제목 (게임 개요 / 보스 소개 / 개발진 등) */
 .section h2 {
   font-size: 2rem;
   color: #f4f4f4;
   margin-bottom: 20px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
 }
 
-/* 본문 내용 */
+/* 본문 텍스트 */
 .section p {
   font-size: 1.1rem;
   color: #f8f8f8;
@@ -84,7 +91,7 @@ body {
   line-height: 1.6;
 }
 
-/* 목록 (예: 제작진 명단) */
+/* 목록 (개발진 등) */
 .section ul {
   list-style: none;
   padding: 0;
@@ -97,13 +104,17 @@ body {
   margin: 6px 0;
 }
 
-/* 영상, 이미지 스타일 */
+/* =======================
+   이미지 & 영상
+======================= */
 video, img {
   max-width: 100%;
   border-radius: 12px;
 }
 
-/* 하단 */
+/* =======================
+   하단
+======================= */
 footer {
   background: rgba(0, 0, 0, 0.25);
   padding: 20px 0;
