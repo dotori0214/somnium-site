@@ -1,4 +1,4 @@
-/* 기본 설정 */
+/* 폰트 및 기본 설정 */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Noto+Sans+KR:wght@300;500;700&display=swap');
 
 * {
@@ -14,7 +14,7 @@ body {
   line-height: 1.6;
 }
 
-/* 섹션 공통 */
+/* 섹션 공통 스타일 */
 .section {
   padding: 80px 10%;
   text-align: center;
@@ -65,35 +65,10 @@ p, li {
 /* 2. 개요 */
 #overview p {
   max-width: 700px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto;
 }
 
-.download-btn {
-  display: inline-block;
-  background: linear-gradient(135deg, #ff4d6d, #7b2cbf);
-  color: white;
-  padding: 12px 28px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.download-btn:hover {
-  background: linear-gradient(135deg, #ff6b81, #9d4edd);
-  transform: scale(1.05);
-}
-
-/* 3. 영상 섹션 */
-#trailer video {
-  width: 80%;
-  max-width: 800px;
-  border-radius: 12px;
-  margin-top: 20px;
-  box-shadow: 0 0 15px rgba(255,255,255,0.1);
-}
-
-/* 4. 게임 특징 */
+/* 3. 게임 특징 */
 #features ul {
   list-style: none;
   display: flex;
@@ -116,7 +91,7 @@ p, li {
   transform: translateY(-5px);
 }
 
-/* 5. 보스 소개 */
+/* 4. 보스 소개 */
 #boss img {
   width: 70%;
   max-width: 600px;
@@ -125,7 +100,7 @@ p, li {
   box-shadow: 0 0 20px rgba(255,255,255,0.1);
 }
 
-/* 6. 개발진 */
+/* 5. 개발진 */
 #team ul {
   list-style: none;
   margin: 20px 0;
