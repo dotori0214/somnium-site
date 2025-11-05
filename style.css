@@ -8,16 +8,16 @@
 
 body {
   font-family: 'Noto Sans KR', 'Nunito', sans-serif;
-  color: #f3f0ff;
+  color: #2e2148;
   text-align: center;
   line-height: 1.8;
   overflow-x: hidden;
-  background: linear-gradient(135deg, #b78cff 0%, #f6b4ff 30%, #9fdcff 70%, #1a144f 100%);
+  background: linear-gradient(to bottom, #f8e6ff 0%, #d8baff 25%, #9ccfff 70%, #1b1543 100%);
   background-attachment: fixed;
   position: relative;
 }
 
-/* 부드러운 구름 효과 */
+/* 구름 느낌 (밝은 부분에서 은은하게 흐림) */
 body::before {
   content: "";
   position: fixed;
@@ -25,30 +25,30 @@ body::before {
   left: -100px;
   right: -100px;
   bottom: -100px;
-  background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.2), transparent 70%),
-              radial-gradient(circle at 70% 60%, rgba(255,255,255,0.15), transparent 70%),
-              radial-gradient(circle at 50% 80%, rgba(255,255,255,0.1), transparent 70%);
-  filter: blur(80px);
+  background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.4), transparent 70%),
+              radial-gradient(circle at 70% 60%, rgba(255,255,255,0.3), transparent 70%),
+              radial-gradient(circle at 50% 80%, rgba(255,255,255,0.2), transparent 70%);
+  filter: blur(90px);
+  animation: floatClouds 15s ease-in-out infinite;
   z-index: 0;
 }
 
-/* 구름 떠다니는 애니메이션 */
 @keyframes floatClouds {
   0% { transform: translate(0, 0); }
-  50% { transform: translate(30px, -20px); }
+  50% { transform: translate(25px, -15px); }
   100% { transform: translate(0, 0); }
-}
-
-body::before {
-  animation: floatClouds 12s ease-in-out infinite;
 }
 
 .section {
   position: relative;
   z-index: 1;
-  padding: 90px 20px;
-  max-width: 900px;
-  margin: auto;
+  padding: 80px 20px;
+  max-width: 850px;
+  margin: 80px auto;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
 }
 
 /* 로고 */
@@ -56,7 +56,7 @@ body::before {
   width: 55%;
   max-width: 500px;
   animation: floatLogo 6s ease-in-out infinite;
-  filter: drop-shadow(0 0 25px rgba(255, 230, 255, 0.7));
+  filter: drop-shadow(0 0 20px rgba(150, 120, 255, 0.3));
 }
 
 @keyframes floatLogo {
@@ -67,14 +67,14 @@ body::before {
 /* 제목 스타일 */
 h2 {
   font-size: 2.2rem;
-  margin-bottom: 20px;
-  color: #fff0ff;
-  text-shadow: 0 0 15px rgba(255, 200, 255, 0.6);
+  margin-bottom: 15px;
+  color: #3b256a;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }
 
 /* 본문 텍스트 */
 p, li {
-  color: #f0ecff;
+  color: #3e3360;
   font-size: 1.1rem;
 }
 
@@ -83,29 +83,28 @@ ul {
   padding: 0;
 }
 
-/* 이미지 (보스) */
+/* 보스 이미지 */
 .boss-img {
   width: 80%;
-  max-width: 520px;
+  max-width: 500px;
   margin: 25px auto;
-  border-radius: 16px;
-  box-shadow: 0 0 35px rgba(230, 180, 255, 0.4);
-  transition: transform 0.8s ease, box-shadow 0.8s ease;
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(160, 130, 255, 0.25);
+  transition: transform 0.5s ease;
 }
 
 .boss-img:hover {
-  transform: scale(1.06);
-  box-shadow: 0 0 45px rgba(255, 210, 255, 0.6);
+  transform: scale(1.03);
 }
 
 /* 이메일 */
 a {
-  color: #ffe8ff;
+  color: #533a8c;
   text-decoration: none;
-  transition: opacity 0.3s;
+  transition: color 0.3s;
 }
 a:hover {
-  opacity: 0.8;
+  color: #7d5fff;
 }
 
 /* 푸터 */
@@ -113,9 +112,9 @@ footer {
   margin-top: 100px;
   padding: 30px;
   font-size: 0.9rem;
-  color: #f4eaff;
-  background: rgba(255, 255, 255, 0.05);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(6px);
+  color: #2e2148;
+  background: rgba(255, 255, 255, 0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
   z-index: 2;
 }
