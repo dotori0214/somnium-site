@@ -1,5 +1,4 @@
-/* 폰트 및 기본 설정 */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Noto+Sans+KR:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap');
 
 * {
   margin: 0;
@@ -9,142 +8,86 @@
 
 body {
   font-family: 'Noto Sans KR', 'Poppins', sans-serif;
-  color: #f5f5f5;
-  background: #0d0d0f;
-  line-height: 1.6;
-}
-
-/* 섹션 공통 스타일 */
-.section {
-  padding: 80px 10%;
+  background: radial-gradient(circle at 30% 30%, #2e2b40, #191622 60%, #0d0b12);
+  color: #e8e8f0;
   text-align: center;
+  line-height: 1.8;
+  overflow-x: hidden;
 }
 
+.section {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* 로고 */
+.logo-img {
+  width: 45%;
+  max-width: 400px;
+  animation: float 5s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(200, 180, 255, 0.5));
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 제목 스타일 */
 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  font-weight: 600;
-  color: #ffffff;
+  color: #cbbaff;
+  text-shadow: 0 0 10px rgba(180, 140, 255, 0.4);
 }
 
+/* 본문 텍스트 */
 p, li {
-  font-size: 1rem;
-  color: #dcdcdc;
+  color: #d9d7ef;
+  font-size: 1.1rem;
 }
 
-/* 1. 로고 섹션 */
-#logo {
-  position: relative;
-  overflow: hidden;
+ul {
+  list-style: none;
   padding: 0;
-  height: 100vh;
 }
 
-#logo video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.4);
-}
-
-.logo-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 280px;
-  z-index: 2;
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translate(-50%, -60%); }
-  to { opacity: 1; transform: translate(-50%, -50%); }
-}
-
-/* 2. 개요 */
-#overview p {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* 3. 게임 특징 */
-#features ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-#features li {
-  background: #1a1a1d;
-  padding: 20px 30px;
+/* 이미지 (보스) */
+.boss-img {
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(255,255,255,0.05);
-  transition: 0.3s;
+  box-shadow: 0 0 25px rgba(160, 130, 255, 0.4);
+  transition: transform 0.5s ease;
 }
 
-#features li:hover {
-  background: #26262b;
-  transform: translateY(-5px);
+.boss-img:hover {
+  transform: scale(1.05);
 }
 
-/* 4. 보스 소개 */
-#boss img {
-  width: 70%;
-  max-width: 600px;
-  border-radius: 16px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.1);
-}
-
-/* 5. 개발진 */
-#team ul {
-  list-style: none;
-  margin: 20px 0;
-}
-
-#team li {
-  margin: 6px 0;
-  font-weight: 500;
-}
-
-#team a {
-  color: #ffb3c6;
+/* 이메일 */
+a {
+  color: #bfaeff;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
-#team a:hover {
-  text-decoration: underline;
+a:hover {
+  color: #ffffff;
 }
 
 /* 푸터 */
 footer {
-  text-align: center;
-  padding: 40px 0;
+  margin-top: 80px;
+  padding: 30px;
   font-size: 0.9rem;
-  background: #0a0a0c;
-  color: #aaa;
-}
-
-/* 반응형 */
-@media (max-width: 768px) {
-  .section {
-    padding: 60px 5%;
-  }
-
-  #features ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #boss img {
-    width: 90%;
-  }
-
-  .logo-img {
-    width: 200px;
-  }
+  color: #aaa7cc;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
