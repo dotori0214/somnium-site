@@ -1,15 +1,20 @@
-/* ✨ 전체 레이아웃 기본 설정 */
+/* ✨ 전체 레이아웃 */
 body {
   margin: 0;
   font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
   color: #fefefe;
-  background: linear-gradient(to bottom, #caa6ff, #e6b5ff, #a8d8ff, #1a164a);
+  background: linear-gradient(to bottom,
+    #b38de0,  /* 보라: 채도 ↓, 명도 ↓ */
+    #d39de0,  /* 핑크: 약간 어둡게 */
+    #8cb7e8,  /* 하늘: 톤 다운 */
+    #16133a   /* 남색: 깊은 톤 */
+  );
   background-attachment: fixed;
   text-align: center;
   overflow-x: hidden;
 }
 
-/* ✨ 각 섹션 기본 스타일 */
+/* ✨ 섹션 스타일 */
 .section {
   padding: 80px 20px;
   max-width: 1000px;
@@ -63,7 +68,7 @@ h2 {
   }
 }
 
-/* ✨ 일반 텍스트 */
+/* ✨ 본문 글씨 */
 p, li {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -82,6 +87,16 @@ p, li {
 .boss-img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 40px rgba(255, 180, 255, 0.8);
+}
+
+/* ✨ 링크 (이메일 등) */
+a {
+  color: #ffddee;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #fff7b8;
 }
 
 /* ✨ 푸터 */
