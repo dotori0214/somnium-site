@@ -1,120 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* ✨ 전체 레이아웃 기본 설정 */
 body {
-  font-family: 'Noto Sans KR', 'Nunito', sans-serif;
-  color: #2e2148;
-  text-align: center;
-  line-height: 1.8;
-  overflow-x: hidden;
-  background: linear-gradient(to bottom, #f8e6ff 0%, #d8baff 25%, #9ccfff 70%, #1b1543 100%);
+  margin: 0;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  color: #fefefe;
+  background: linear-gradient(to bottom, #caa6ff, #e6b5ff, #a8d8ff, #1a164a);
   background-attachment: fixed;
-  position: relative;
+  text-align: center;
+  overflow-x: hidden;
 }
 
-/* 구름 느낌 (밝은 부분에서 은은하게 흐림) */
-body::before {
-  content: "";
-  position: fixed;
-  top: -100px;
-  left: -100px;
-  right: -100px;
-  bottom: -100px;
-  background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.4), transparent 70%),
-              radial-gradient(circle at 70% 60%, rgba(255,255,255,0.3), transparent 70%),
-              radial-gradient(circle at 50% 80%, rgba(255,255,255,0.2), transparent 70%);
-  filter: blur(90px);
-  animation: floatClouds 15s ease-in-out infinite;
-  z-index: 0;
-}
-
-@keyframes floatClouds {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(25px, -15px); }
-  100% { transform: translate(0, 0); }
-}
-
+/* ✨ 각 섹션 기본 스타일 */
 .section {
-  position: relative;
-  z-index: 1;
   padding: 80px 20px;
-  max-width: 850px;
-  margin: 80px auto;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12px);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-/* 로고 */
+/* ✨ 로고 섹션 */
+#logo {
+  position: relative;
+  padding-top: 120px;
+}
 .logo-img {
-  width: 55%;
-  max-width: 500px;
-  animation: floatLogo 6s ease-in-out infinite;
-  filter: drop-shadow(0 0 20px rgba(150, 120, 255, 0.3));
+  width: 420px;
+  max-width: 80%;
+  filter: drop-shadow(0 0 25px rgba(255, 230, 255, 0.8));
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
 }
 
-@keyframes floatLogo {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-}
-
-/* 제목 스타일 */
+/* ✨ 제목 스타일 (노랑-핑크 발광) */
 h2 {
-  font-size: 2.2rem;
-  margin-bottom: 15px;
-  color: #3b256a;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ffe99f, #ffc6ec, #fff0b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0 0 15px rgba(255, 230, 150, 0.7),
+    0 0 25px rgba(255, 160, 200, 0.5),
+    0 0 40px rgba(255, 210, 240, 0.3);
+  letter-spacing: 1px;
+  animation: titleGlow 4s ease-in-out infinite alternate;
 }
 
-/* 본문 텍스트 */
+@keyframes titleGlow {
+  0% {
+    text-shadow:
+      0 0 10px rgba(255, 230, 150, 0.6),
+      0 0 20px rgba(255, 160, 200, 0.4),
+      0 0 35px rgba(255, 210, 240, 0.2);
+  }
+  100% {
+    text-shadow:
+      0 0 25px rgba(255, 250, 180, 0.9),
+      0 0 45px rgba(255, 180, 220, 0.6),
+      0 0 70px rgba(255, 230, 250, 0.4);
+  }
+}
+
+/* ✨ 일반 텍스트 */
 p, li {
-  color: #3e3360;
   font-size: 1.1rem;
+  line-height: 1.8;
+  color: #f5f5f8;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-/* 보스 이미지 */
+/* ✨ 보스 이미지 */
 .boss-img {
-  width: 80%;
-  max-width: 500px;
-  margin: 25px auto;
-  border-radius: 14px;
-  box-shadow: 0 0 25px rgba(160, 130, 255, 0.25);
-  transition: transform 0.5s ease;
+  width: 300px;
+  border-radius: 20px;
+  margin: 20px 0;
+  box-shadow: 0 0 25px rgba(255, 210, 255, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-
 .boss-img:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(255, 180, 255, 0.8);
 }
 
-/* 이메일 */
-a {
-  color: #533a8c;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-a:hover {
-  color: #7d5fff;
-}
-
-/* 푸터 */
+/* ✨ 푸터 */
 footer {
-  margin-top: 100px;
-  padding: 30px;
+  padding: 40px 0;
   font-size: 0.9rem;
-  color: #2e2148;
-  background: rgba(255, 255, 255, 0.6);
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(8px);
-  z-index: 2;
+  color: #ddd;
+  background: rgba(0, 0, 30, 0.3);
+}
+footer p {
+  margin: 0;
 }
