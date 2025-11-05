@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap');
 
 * {
   margin: 0;
@@ -7,48 +7,74 @@
 }
 
 body {
-  font-family: 'Noto Sans KR', 'Poppins', sans-serif;
-  background: radial-gradient(circle at 30% 30%, #2e2b40, #191622 60%, #0d0b12);
-  color: #e8e8f0;
+  font-family: 'Noto Sans KR', 'Nunito', sans-serif;
+  color: #f3f0ff;
   text-align: center;
   line-height: 1.8;
   overflow-x: hidden;
+  background: linear-gradient(135deg, #b78cff 0%, #f6b4ff 30%, #9fdcff 70%, #1a144f 100%);
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* 부드러운 구름 효과 */
+body::before {
+  content: "";
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  right: -100px;
+  bottom: -100px;
+  background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.2), transparent 70%),
+              radial-gradient(circle at 70% 60%, rgba(255,255,255,0.15), transparent 70%),
+              radial-gradient(circle at 50% 80%, rgba(255,255,255,0.1), transparent 70%);
+  filter: blur(80px);
+  z-index: 0;
+}
+
+/* 구름 떠다니는 애니메이션 */
+@keyframes floatClouds {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -20px); }
+  100% { transform: translate(0, 0); }
+}
+
+body::before {
+  animation: floatClouds 12s ease-in-out infinite;
 }
 
 .section {
-  padding: 80px 20px;
+  position: relative;
+  z-index: 1;
+  padding: 90px 20px;
   max-width: 900px;
   margin: auto;
 }
 
 /* 로고 */
 .logo-img {
-  width: 45%;
-  max-width: 400px;
-  animation: float 5s ease-in-out infinite;
-  filter: drop-shadow(0 0 20px rgba(200, 180, 255, 0.5));
+  width: 55%;
+  max-width: 500px;
+  animation: floatLogo 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 25px rgba(255, 230, 255, 0.7));
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
 }
 
 /* 제목 스타일 */
 h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 20px;
-  color: #cbbaff;
-  text-shadow: 0 0 10px rgba(180, 140, 255, 0.4);
+  color: #fff0ff;
+  text-shadow: 0 0 15px rgba(255, 200, 255, 0.6);
 }
 
 /* 본문 텍스트 */
 p, li {
-  color: #d9d7ef;
+  color: #f0ecff;
   font-size: 1.1rem;
 }
 
@@ -60,34 +86,36 @@ ul {
 /* 이미지 (보스) */
 .boss-img {
   width: 80%;
-  max-width: 500px;
-  margin: 20px auto;
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(160, 130, 255, 0.4);
-  transition: transform 0.5s ease;
+  max-width: 520px;
+  margin: 25px auto;
+  border-radius: 16px;
+  box-shadow: 0 0 35px rgba(230, 180, 255, 0.4);
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
 }
 
 .boss-img:hover {
-  transform: scale(1.05);
+  transform: scale(1.06);
+  box-shadow: 0 0 45px rgba(255, 210, 255, 0.6);
 }
 
 /* 이메일 */
 a {
-  color: #bfaeff;
+  color: #ffe8ff;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: opacity 0.3s;
 }
-
 a:hover {
-  color: #ffffff;
+  opacity: 0.8;
 }
 
 /* 푸터 */
 footer {
-  margin-top: 80px;
+  margin-top: 100px;
   padding: 30px;
   font-size: 0.9rem;
-  color: #aaa7cc;
-  background: rgba(255, 255, 255, 0.02);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #f4eaff;
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  z-index: 2;
 }
