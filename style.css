@@ -1,6 +1,3 @@
-/* =======================
-   기본 설정
-======================= */
 body {
   margin: 0;
   font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
@@ -11,27 +8,31 @@ body {
   overflow-x: hidden;
 }
 
-/* =======================
-   로고 (떠다니는 효과)
-======================= */
+/* 로고 */
 #logo {
   padding: 100px 20px 60px;
 }
-
 .logo-img {
   width: 300px;
   margin-bottom: 10px;
   animation: float 4s ease-in-out infinite, glow 3s ease-in-out infinite;
 }
-
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-12px); }
 }
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 150, 0.6))
+            drop-shadow(0 0 20px rgba(255, 255, 120, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(255, 255, 180, 0.9))
+            drop-shadow(0 0 40px rgba(255, 255, 120, 0.6));
+  }
+}
 
-/* =======================
-   공통 섹션
-======================= */
+/* 공통 섹션 */
 .section {
   padding: 60px 20px;
   max-width: 900px;
@@ -40,7 +41,7 @@ body {
   border-radius: 20px;
 }
 
-/* ✨ 유리창 효과 */
+/* 유리창 효과 */
 .glass {
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(16px) saturate(160%);
@@ -49,9 +50,7 @@ body {
   box-shadow: 0 0 25px rgba(180, 160, 255, 0.25);
 }
 
-/* =======================
-   제목 및 본문
-======================= */
+/* 제목 */
 .section h2 {
   font-size: 2rem;
   color: #f4f4f4;
@@ -59,73 +58,59 @@ body {
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
 }
 
+/* 본문 */
 .section p {
   font-size: 1.1rem;
   color: #f8f8f8;
   line-height: 1.6;
 }
 
-/* =======================
-   주요 특징 리스트 (재생버튼 느낌)
-======================= */
+/* 작게 보일 섹션 (UI~세계관 등) */
+.small-section p,
+.small-section li {
+  font-size: 0.95rem;
+}
+
+/* ▶ 리스트 스타일 */
 .section ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .section li {
   font-size: 1.1rem;
   color: #f8f8f8;
   line-height: 1.7;
-  position: relative;
-  padding-left: 40px;
   margin: 10px 0;
+  display: flex;
+  align-items: center;
 }
 
-/* ▶️ 연보라빛 재생버튼 스타일 */
+/* ▶ 문자 발광 효과 */
 .section li::before {
-  content: '';
-  position: absolute;
-  left: 10px;
-  top: 7px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #d8b4ff, #8b5cf6);
-  box-shadow:
-    0 0 10px rgba(190, 140, 255, 0.8),
-    0 0 20px rgba(180, 120, 255, 0.6);
+  content: "▶";
+  font-size: 1.1rem;
+  color: #d6b8ff;
+  margin-right: 10px;
+  text-shadow:
+    0 0 8px rgba(210, 160, 255, 0.8),
+    0 0 16px rgba(180, 140, 255, 0.6);
   animation: pulseGlow 2.5s ease-in-out infinite;
 }
-
-.section li::after {
-  content: '';
-  position: absolute;
-  left: 17px;
-  top: 10px;
-  border-left: 7px solid white;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-}
-
-/* 작게 호흡하듯 빛나는 효과 */
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow:
-      0 0 10px rgba(200, 160, 255, 0.8),
-      0 0 20px rgba(180, 130, 255, 0.6);
+    text-shadow:
+      0 0 8px rgba(200, 160, 255, 0.8),
+      0 0 16px rgba(180, 130, 255, 0.6);
   }
   50% {
-    box-shadow:
-      0 0 15px rgba(230, 190, 255, 1),
-      0 0 35px rgba(200, 150, 255, 0.9);
+    text-shadow:
+      0 0 12px rgba(230, 190, 255, 1),
+      0 0 28px rgba(200, 150, 255, 0.9);
   }
 }
 
-/* =======================
-   하단
-======================= */
+/* 하단 */
 footer {
   background: rgba(0, 0, 0, 0.25);
   padding: 20px 0;
