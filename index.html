@@ -8,16 +8,16 @@
 </head>
 <body>
   <!-- 1. 중앙 로고 -->
-  <section id="logo" class="section">
+  <section id="logo" class="section logo-section">
     <img src="Somnium_logo.png" alt="솜니움 로고" class="logo-img">
-    <video autoplay muted loop playsinline>
+    <video autoplay muted loop playsinline class="logo-video">
       <source src="logo.mp4" type="video/mp4">
       브라우저가 영상을 지원하지 않습니다.
     </video>
   </section>
 
   <!-- 2. 게임 개요 -->
-  <section id="overview" class="section">
+  <section id="overview" class="section text-left">
     <h2>게임 개요</h2>
     <p>이 게임은 플레이어가 꿈속 세계를 탐험하며 현실로 돌아가기 위해 여러 시련을 헤쳐 나가는 몽환적인 어드벤처입니다.</p>
 
@@ -28,28 +28,35 @@
     <p>사람들은 누구나 꿈을 꾸며, 꿈에는 각자의 삶과 기억, 감정과 희망, 두려움이 담겨 있습니다. 잠든 밤마다 무수히 많은 꿈들이 하나의 거대한 꿈 속 세계를 형성하며, 그 안에서는 현실에서 불가능한 일들이 가능합니다. 그러나 최근 악몽의 힘이 증폭되며 꿈의 순수함을 위협하고 있으며 이를 막기 위한 존재, 즉 플레이어가 나타납니다.</p>
 
     <h3>주요 특징</h3>
-    <ul>
-      <li>플레이어는 다른 사람의 꿈 속을 자유롭게 이동하는 특별한 능력 보유</li>
-      <li>꿈 속 세상은 사람마다 다르게 구성되어 몰입감을 제공</li>
-      <li>악몽은 단순 괴물이 아닌 현실의 상처와 트라우마에서 비롯된 존재</li>
-      <li>보스는 피해자로서의 면모와 꿈 속에서 증폭된 악몽을 동시에 보여줌</li>
+    <ul class="play-list">
+      <li><span class="play-btn">▶</span> 플레이어는 다른 사람의 꿈 속을 자유롭게 이동하는 특별한 능력 보유</li>
+      <li><span class="play-btn">▶</span> 꿈 속 세상은 사람마다 다르게 구성되어 몰입감을 제공</li>
+      <li><span class="play-btn">▶</span> 악몽은 단순 괴물이 아닌 현실의 상처와 트라우마에서 비롯된 존재</li>
+      <li><span class="play-btn">▶</span> 보스는 피해자로서의 면모와 꿈 속에서 증폭된 악몽을 동시에 보여줌</li>
     </ul>
 
     <h3>UI 및 아트 콘셉트</h3>
-    <ul>
-      <li>꿈 속 느낌을 살린 몽환적 2D 그래픽</li>
-      <li>보스는 현실적 상처가 반영된 캐릭터이며 장난감 등 보스에 맞는 꿈 속 요소 포함</li>
+    <ul class="play-list">
+      <li><span class="play-btn">▶</span> 꿈 속 느낌을 살린 몽환적 2D 그래픽</li>
+      <li><span class="play-btn">▶</span> 보스는 현실적 상처가 반영된 캐릭터이며 장난감 등 보스에 맞는 꿈 속 요소 포함</li>
     </ul>
   </section>
 
-  <!-- 3. 제작진 -->
-  <section id="team" class="section">
+  <!-- 3. 보스 소개 -->
+  <section id="boss" class="section text-left">
+    <h2>보스 소개</h2>
+    <img src="boss-panel.png" alt="보스 판넬" class="boss-img">
+    <p>꿈속의 수호자 ‘루멘’은 플레이어의 공포와 기억을 시험하는 존재로, 빛과 어둠을 오가며 전투를 펼칩니다.</p>
+  </section>
+
+  <!-- 4. 제작진 -->
+  <section id="team" class="section text-left">
     <h2>개발진</h2>
     <ul>
-      <li>린 : </li>
-      <li>도토리를 찾아서 : </li>  
+      <li>린 : 기획 및 그래픽</li>
+      <li>도토리를 찾아서 : 프로그래밍 (몬스터 AI 담당)</li>  
     </ul>
-    
+
     <p>📧 문의: <a href="mailto:joy6420@naver.com">joy6420@naver.com</a></p>
   </section>
 
@@ -58,3 +65,4 @@
   </footer>
 </body>
 </html>
+
