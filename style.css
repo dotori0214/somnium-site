@@ -99,6 +99,7 @@ body {
   text-shadow: 0 0 8px rgba(210,160,255,0.8), 0 0 16px rgba(180,140,255,0.6);
   animation: pulseGlow 2.5s ease-in-out infinite;
 }
+
 @keyframes pulseGlow {
   0%,100%{
     text-shadow:0 0 8px rgba(200,160,255,0.8),0 0 16px rgba(180,130,255,0.6);
@@ -106,6 +107,8 @@ body {
   50%{
     text-shadow:0 0 12px rgba(230,190,255,1),0 0 28px rgba(200,150,255,0.9);
   }
+
+  
 }
 
 /* 하단 */
@@ -114,4 +117,11 @@ footer {
   padding: 20px 0;
   font-size: 0.9rem;
   color: #ddd;
+}
+
+
+/* 이메일 색상 변경 */
+.email-link {
+  color: #ffb6ff;
+  text-decoration: underline;
 }
