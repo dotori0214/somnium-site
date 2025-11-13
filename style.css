@@ -66,12 +66,11 @@ body {
   line-height: 1.6;
 }
 
-/* 작게 보이는 섹션 (제목+본문) */
-.small-section h2 {
+/* 작은 제목/본문 */
+.small-title {
   font-size: 1.5rem;
 }
-.small-section p,
-.small-section li {
+.small-text {
   font-size: 0.95rem;
 }
 
