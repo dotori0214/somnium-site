@@ -74,23 +74,23 @@ body {
   font-size: 0.95rem;
 }
 
-/* 리스트 ▶ 발광 */
-.section ul {
+/* 작은 리스트 ▶ 발광 */
+.small-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 10px 0 20px;
 }
-.section li {
-  font-size: 1.1rem;
+.small-list li {
+  font-size: 0.95rem;
   color: #f8f8f8;
   line-height: 1.7;
-  margin: 10px 0;
+  margin: 8px 0;
   display: flex;
   align-items: center;
 }
-.section li::before {
+.small-list li::before {
   content: "▶";
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: #d6b8ff;
   margin-right: 10px;
   text-shadow: 0 0 8px rgba(210,160,255,0.8), 0 0 16px rgba(180,140,255,0.6);
