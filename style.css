@@ -61,7 +61,7 @@ body {
 
 /* 작은 제목 */
 .sub-title {
-  font-size: 1.6rem;
+  font-size: 1.5rem; /* 제목 작게 */
   margin-bottom: 12px;
 }
 
@@ -74,7 +74,7 @@ body {
 
 /* 작은 본문 */
 .small-text {
-  font-size: 0.95rem;
+  font-size: 0.95rem; /* 설명 글 작게 */
 }
 
 /* 작은 리스트 ▶ 발광 */
@@ -84,7 +84,7 @@ body {
   margin: 10px 0 20px;
 }
 .small-list li {
-  font-size: 0.95rem;
+  font-size: 0.95rem; /* 리스트 작게 */
   color: #f8f8f8;
   line-height: 1.7;
   margin: 8px 0;
