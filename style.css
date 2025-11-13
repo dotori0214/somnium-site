@@ -59,10 +59,10 @@ body {
   padding: 60px 20px;
   max-width: 900px;
   margin: 0 auto;
-  text-align: left; /* 중앙에서 약간 왼쪽 정렬 */
+  text-align: left; /* 중앙에서 약간 왼쪽 느낌 */
 }
 
-/* 반투명 섹션 (보스 소개용) */
+/* 반투명한 창 효과 (타이틀 제외) */
 .glass-section {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
